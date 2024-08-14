@@ -3,9 +3,8 @@ import { Container, Grid, Card, CardContent, CardMedia, Typography, Button } fro
 
 const Marketplace = () => {
   const nfts = [
-    { id: 1, name: 'Team A Exclusive', image: '/images/nft1.png', price: '0.5 ETH' },
-    { id: 2, name: 'Player B Limited Edition', image: '/images/nft2.png', price: '1.2 ETH' },
-    // Add more NFT objects as needed
+    { id: 1, name: 'Ferrari F1 - F2 Integrated', image: require('../assets/f1.png'), price: '0.5 ETH' },
+    { id: 2, name: 'Yusuf Dikeç Natural Shooter Edition', image: require('../assets/yusuf.png'), price: '1.2 ETH' },
   ];
 
   return (
@@ -16,10 +15,10 @@ const Marketplace = () => {
       <Grid container spacing={4}>
         {nfts.map((nft) => (
           <Grid item xs={12} md={4} key={nft.id}>
-            <Card style={{ backgroundColor: '#28094B', color: '#fff' }}>
+            <Card style={{ backgroundColor: '#28094B', color: '#fff', minHeight: '400px' }}>
               <CardMedia
                 component="img"
-                height="200"
+                style={{ height: '200px', objectFit: 'cover' }}
                 image={nft.image}
                 alt={nft.name}
               />
@@ -27,7 +26,7 @@ const Marketplace = () => {
                 <Typography variant="h5" style={{ color: '#12C2E8', marginBottom: '10px' }}>
                   {nft.name}
                 </Typography>
-                <Typography variant="body2" style={{ marginBottom: '10px' }}>
+                <Typography variant="body2" style={{ marginBottom: '20px' }}>
                   {nft.price}
                 </Typography>
                 <Button variant="contained" color="primary" style={{ backgroundColor: '#12C2E8', color: '#28094B' }}>

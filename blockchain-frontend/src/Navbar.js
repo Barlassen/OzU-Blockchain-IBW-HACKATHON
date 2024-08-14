@@ -12,7 +12,7 @@ const Navbar = () => {
           to="/"
           style={{ fontSize: '1.5rem', flex: '1', color: '#ffffff', textDecoration: 'none' }}
         >
-          SportsDAO
+          SFT | Sport Functional Token
         </Typography>
         <Box sx={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
           <Button color="inherit" component={Link} to="/marketplace" style={{ textTransform: 'none', color: '#ffffff' }}>

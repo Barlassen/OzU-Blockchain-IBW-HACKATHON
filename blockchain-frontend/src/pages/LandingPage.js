@@ -26,7 +26,7 @@ const LandingPage = () => {
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
           <Typography variant="h2" style={{ color: '#12C2E8', fontWeight: 'bold', marginBottom: '20px' }}>
-            Own a Piece of Your Favorite Team
+            Get on board with your supported sport clubs and athletes!
           </Typography>
           <Typography variant="body1" style={{ marginBottom: '30px' }}>
             Get exclusive access, vote on key decisions, and enjoy one-of-a-kind experiences by holding our loyalty NFTs. Join the revolution in sports fandom today!
@@ -52,7 +52,11 @@ const LandingPage = () => {
             }}
           >
             <Typography variant="h4" style={{ color: '#12C2E8' }}>
-              [NFT Image or Graphic Here]
+            <img 
+      src={require('../assets/nft.webp')} 
+      alt="NFT Image" 
+      style={{ width: '250px', height: 'auto' }} 
+    />
             </Typography>
           </Box>
         </Grid>

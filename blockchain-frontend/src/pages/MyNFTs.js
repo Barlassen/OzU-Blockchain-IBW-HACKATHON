@@ -3,9 +3,8 @@ import { Container, Grid, Card, CardContent, CardMedia, Typography } from '@mui/
 
 const MyNFTs = () => {
   const ownedNFTs = [
-    { id: 1, name: 'Team A Exclusive', image: '/images/nft1.png' },
-    { id: 2, name: 'Player B Limited Edition', image: '/images/nft2.png' },
-    // Add more owned NFT objects as needed
+    { id: 1, name: 'Ferrari F1 - F2 Integrated', image: require('../assets/f1.png') },
+    { id: 2, name: 'Yusuf Dikeç Natural Shooter Edition', image: require('../assets/yusuf.png') },
   ];
 
   return (
@@ -16,10 +15,10 @@ const MyNFTs = () => {
       <Grid container spacing={4}>
         {ownedNFTs.map((nft) => (
           <Grid item xs={12} md={4} key={nft.id}>
-            <Card style={{ backgroundColor: '#28094B', color: '#fff' }}>
+            <Card style={{ backgroundColor: '#28094B', color: '#fff', minHeight: '400px' }}>
               <CardMedia
                 component="img"
-                height="200"
+                style={{ height: '200px', objectFit: 'cover' }}  // Adjust image to fit within the card
                 image={nft.image}
                 alt={nft.name}
               />
